@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH --qos=premium
+#SBATCH --nodes=64
+#SBATCH --ntasks-per-node=64
+#SBATCH --time=24:00:00
+#SBATCH --job-name=sam_test
+#SBATCH --licenses=SCRATCH
+#SBATCH --account=m4127 
+#SBATCH --constraint=knl
+##SBATCH  --exclusive
+cd /global/u2/x/xzheng/Work/2022/ECRP/SAM/SAM6.11.6
+srun ./SAM_ADV_MPDATA_SGS_TKE_RAD_RRTM_MICRO_P3   
